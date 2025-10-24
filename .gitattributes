@@ -1,0 +1,46 @@
+# === Normalize Line Endings ===
+* text=auto eol=lf
+
+# === Language-specific settings ===
+
+# Rust source files
+*.rs text diff=rust
+
+# TypeScript / JavaScript
+*.ts text diff=typescript
+*.js text diff=javascript
+*.json text diff=json
+
+# Markdown & Docs
+*.md text diff=markdown
+*.toml text diff=toml
+*.yml text diff=yaml
+*.yaml text diff=yaml
+
+# Shell scripts
+*.sh text eol=lf
+
+# === Binary and build artifacts ===
+*.so binary
+*.a binary
+*.dylib binary
+*.rlib binary
+*.rmeta binary
+
+# Keypairs and secrets (ensure treated as binary)
+*.json filter=lfs diff merge text lockable=false
+target/deploy/*.json binary
+*.key binary
+*.keypair binary
+*.pem binary
+
+# === Ignore diffs for generated files ===
+target/idl/*.json -diff
+app/idl/*.json -diff
+
+# === OS-specific ===
+*.exe binary
+*.dll binary
+*.db binary
+.DS_Store binary
+Thumbs.db binary

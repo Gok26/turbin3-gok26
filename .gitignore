@@ -1,0 +1,77 @@
+.anchor
+.DS_Store
+target
+**/*.rs.bk
+node_modules
+test-ledger
+.yarn
+
+# === Rust / Cargo ===
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# === Solana / Anchor ===
+.anchor/
+.DS_Store
+test-ledger/
+test-ledger-log.txt
+node_modules/
+dist/
+deploy.json
+*.so
+*.dylib
+*.a
+
+# Compiled BPF artifacts
+*.rlib
+*.rmeta
+*.bc
+*.ll
+
+# === Keypairs / Secrets ===
+target/deploy/*.json
+*.key
+*.keypair
+*.pem
+*.der
+*.p12
+*.priv
+*.pub
+
+# === Logs & Temp Files ===
+*.log
+*.out
+*.tmp
+*.swp
+*.bak
+
+# === TypeScript / JS Tests ===
+node_modules/
+package-lock.json
+yarn.lock
+.nyc_output/
+coverage/
+tsconfig.tsbuildinfo
+
+# === IDE / OS ===
+.vscode/
+.idea/
+*.iml
+*.suo
+*.user
+*.rsuser
+*.db
+Thumbs.db
+Desktop.ini
+
+# === Environment ===
+.env
+.env.*
+*.local
+
+# === Generated IDL ===
+target/idl/
+app/idl/
+
+
